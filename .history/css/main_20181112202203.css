@@ -1,0 +1,43 @@
+/* Basic style*/
+
+
+/* GRID */
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    'top top top'
+    'hero hero hero'
+    'about about about'
+    'skills'
+    'portfolio'
+    'footer';
+    
+}
+
+.top{
+    grid-area: top;
+    height: 100px;
+    bac
+}
+
+.hero{
+    grid-area: hero;
+}
+
+.about{
+    grid-area: about;
+}
+
+.skills{
+    grid-area: skills;
+}
+
+.portfolio{
+    grid-area: portfolio;
+}
+
+footer{
+    grid-area: footer;
+}
+

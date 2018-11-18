@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        #test {
+
+            height: 100vh;
+            background-color: tomato;
+
+        }
+
+        #test2 {
+
+            height: 100vh;
+            background-color: violet;
+        }
+
+        #test3 {
+
+            height: 100vh;
+            background-color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <section id='test'> random text</section>
+        <section id='test2'> random text</section>
+        <section id='test3'> random text</section>
+    </div>
+
+
+    <script>
+        // $('#button').click(function(){
+        //     $('#test').animate({height: '0px', opacity: '0'}, 500, function(){
+        //         $(this).css('display','none');
+        //     });
+        // });
+
+        var initialScroll = window.scrollY;
+        var actualScroll;
+        var sections = $('section');
+        var initialSection = 0;
+
+
+        function sectionInViewport() {
+
+            var viewportTop = $(window).scrollTop();
+            var viewportBottom = $(window).height() + viewportTop;
+            var activeSection;
+            var i;
+
+            //pętla przez sekcje strony
+            for (i = 0; i < sections.length; i++) {
+                var forSection = sections[i];
+                var forSectionHeight = $(forSection).height();
+                var sectionTop = $(forSection).position().top;
+                var sectionBottom = sectionTop + forSectionHeight;
+                var scrollUpDown = scrollDirection();
+
+
+
+
+                if (scrollUpDown == 'down') {
+                    if (viewportBottom >= sectionTop) {
+                        activeSection = i;
+
+                    };
+                } else if (scrollUpDown == 'up') {
+                    if (viewportTop <= sectionBottom) {
+                        activeSection = i;
+
+                        break;
+                    };
+                };
+
+
+
+            };
+            sectionSwitch(activeSection);
+            return activeSection;
+
+
+        }
+
+        function scrollDirection() {
+
+            actualScroll = window.scrollY;
+            if (actualScroll > initialScroll) {
+
+                return 'down';
+
+            } else if (actualScroll < initialScroll) {
+
+                return 'up';
+            };
+        }
+
+        function sectionSwitch(sIndex) {
+            var actualSection = sIndex;
+
+            if (actualSection != initialSection) {
+
+                console.log("Aktualna sekcja:" + '    ' + 'Initial sekcja:' + '\n' +
+                                actualSection + '    ' + initialSection);
+                initialSection = actualSection;
+               
+               
+                             
+                console.log("Aktualna sekcja:" + '    ' + 'Initial sekcja:' + '\n' +
+                             actualSection + '    ' + initialSection);
+                             
+                             
+            }else{scrollSection(initialSection);}
+            
+            initialScroll = actualScroll;
+            
+
+        }
+
+        function scrollSection(arr){
+            var sectionToScrollTop = sections[arr].offsetTop;
+            window.scrollTo(0 , sectionToScrollTop);
+            console.log(sectionToScrollTop);
+            
+        }
+        window.addEventListener('scroll', sectionInViewport);
+    </script>
+</body>
+
+</html>

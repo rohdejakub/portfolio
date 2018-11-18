@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jakub Rohde - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scroll.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#hero" class="menu__item">START</a></li>
+                    <li><a href="#about" class="menu__item">O MNIE</a></li>
+                    <li><a href="#skills" class="menu__item">UMIEJĘTNOŚCI</a></li>
+                    <li><a href="#portfolio" class="menu__item">PORTFOLIO</a></li>
+                </ul>
+            </nav>
+            <a class='nav__trigger '><i class="material-icons">menu</i><i class="material-icons material-icons--hide">close</i></a>
+
+
+        </header>
+        <div class="wrapper">
+            <section class="hero section--show" id='hero'>
+                <video autoplay muted loop class="hero__video">
+                    <source src="img/Typing_dark_05_Videvo.mov" type="video/mp4">
+                </video>
+
+            </section>
+            <section class="about section--hide" id='about'>
+                <h1 class="section__title">O mnie</h1>
+                <div class="about__text">
+                    Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+                    IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+                    mLorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+                    IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+                    IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum Lorem IpsumLorem IpsumLorem
+                    IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+                    IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+                    IpsumLorem IpsumLorem Ipsum Lorem Ipm IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+                    IpsumLorem
+                    IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+                    IpsumLorem IpsumLorem IpsumLorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+                    IpsumLorem IpsumLorem IpsumLorem I
+                </div>
+
+                <div class="photo">
+                    <img class="photo__img" src="img/myFace_min.jpg" alt="">
+                </div>
+            </section>
+            <section class="skills section--hide" id='skills'>
+                    <i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js"></i>
+            </section>
+            <section class="portfolio section--hide" id='portfolio'>sdsad</section>
+        </div>
+    </div>
+    <footer></footer>
+    </div>
+    <script>
+        $('.nav__trigger').click(function () {
+            $('nav').toggle('normal');
+            $('.nav__trigger').toggleClass('nav__trigger--black');
+            $('.material-icons').toggleClass('material-icons--hide');
+        });
+        $('#button1').click(function () {
+            // $('.container').removeClass('overflow-hidden');
+            $('nav').hide('slow');
+
+        });
+    </script>
+</body>
+
+</html>

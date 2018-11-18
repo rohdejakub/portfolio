@@ -1,0 +1,193 @@
+/* General style*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-size: 16px;
+    color: white;
+    
+}
+
+.container {
+    height: 100vh;
+    
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+
+section {
+    height: 100%;
+    width: 100%;
+    transition: 0.9s opacity;
+    scroll-snap-align: center;
+}
+.wrapper{
+    scroll-snap-type: y mandatory;
+    margin: 0 10%;
+    height: 100vh;
+    
+}
+
+.section--show {
+    opacity: 1;
+}
+
+.section--hide {
+    opacity: 0;
+}
+.section__title{
+    text-align: center;
+    padding: 3rem;
+}
+
+/* TOP*/
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 500;
+
+}
+
+.nav__trigger {
+    padding: 1rem 1rem;
+    z-index: 100;
+    color: whitesmoke;
+}
+
+
+.nav__trigger i.material-icons {
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+.nav__trigger i.material-icons--hide{
+    display: none;
+}
+.nav__trigger--black{
+    color: black;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+
+}
+
+.menu__item {
+    display: block;
+    padding: 2rem 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+/* GRID */
+
+/* //.container{
+    display: grid;
+    grid-template-areas: 
+    'top'
+    'hero'
+    'about'
+    'skills'
+    'portfolio'
+    'footer';
+     */
+
+
+
+
+.hero {
+    grid-area: hero;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+}
+
+.hero__video {
+
+
+    height: 100%;
+    z-index: -100;
+    background-size: cover;
+
+
+
+}
+
+.about {
+    grid-area: about;
+
+    /* background-color: blueviolet; */
+}
+.about__text{
+    color: black;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    padding: 50px;
+}
+
+.skills {
+    grid-area: skills;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    /* background-color: pink; */
+}
+.skills i{
+    font-size: 150px;
+    
+}
+
+.portfolio {
+    grid-area: portfolio;
+
+    /* background-color: #222; */
+}
+
+footer {
+    grid-area: footer;
+
+    /* background-color: orangered; */
+}
+
+.photo{
+    border: 8px solid black;
+    
+    background-color: white;
+    width: 216px;
+    height: 216px;
+    border-radius: 50%;
+    position: relative;
+    margin: -50px 0 0 0;
+    
+}
+.photo__img{
+    width: 194px;
+    height: 194px;
+    margin: 3px;
+    border-radius: 50%;
+}

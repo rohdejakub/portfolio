@@ -1,0 +1,55 @@
+/* Basic style*/
+
+
+/* GRID */
+
+/* //.container{
+    display: grid;
+    grid-template-areas: 
+    'top'
+    'hero'
+    'about'
+    'skills'
+    'portfolio'
+    'footer';
+     */
+}
+
+.top{
+    grid-area: top;
+    height: 100px;
+    background-color: black;
+    color: white;
+}
+
+#hero{
+    grid-area: hero;
+    height: 400px;
+    background-color: aqua;
+}
+
+.about{
+    grid-area: about;
+    height: 400px;
+    background-color: blueviolet;
+}
+
+.skills{
+    grid-area: skills;
+    height: 400px;
+    background-color: pink;
+}
+
+.portfolio{
+    grid-area: portfolio;
+    height: 400px;
+    background-color: #222;
+}
+
+footer{
+    grid-area: footer;
+    height: 100px;
+    background-color: orangered;
+}
+
+

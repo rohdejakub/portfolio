@@ -1,0 +1,17 @@
+/* Basic style*/
+
+
+/* GRID */
+
+.container{
+    display: grid;
+    
+}
+
+.top{
+    grid-area: top;
+}
+
+.hero{
+    grid-area: hero;
+}
